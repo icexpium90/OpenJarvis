@@ -1321,7 +1321,7 @@ async fn boot_backend(backend: SharedBackend, status: SharedStatus) {
                 "clone",
                 "--depth",
                 "1",
-                "https://github.com/open-jarvis/OpenJarvis.git",
+                "https://github.com/icexpium90/OpenJarvis.git",
                 &clone_target,
             ])
             .stdout(std::process::Stdio::null())
@@ -1339,7 +1339,7 @@ async fn boot_backend(backend: SharedBackend, status: SharedStatus) {
                     let mut s = status.lock().await;
                     s.error = Some(format!(
                         "Failed to download OpenJarvis: {}. \
-                         Clone manually: git clone https://github.com/open-jarvis/OpenJarvis.git {}",
+                         Clone manually: git clone https://github.com/icexpium90/OpenJarvis.git {}",
                         stderr.trim(),
                         clone_target,
                     ));
@@ -1349,7 +1349,7 @@ async fn boot_backend(backend: SharedBackend, status: SharedStatus) {
                     let mut s = status.lock().await;
                     s.error = Some(format!(
                         "Failed to download OpenJarvis: {}. \
-                         Clone manually: git clone https://github.com/open-jarvis/OpenJarvis.git {}",
+                         Clone manually: git clone https://github.com/icexpium90/OpenJarvis.git {}",
                         e, clone_target,
                     ));
                     return;
