@@ -38,7 +38,7 @@ class TestServerConfig:
     def test_defaults(self):
         cfg = ServerConfig()
         assert cfg.host == "127.0.0.1"
-        assert cfg.port == 8000
+        assert cfg.port == 8765
         assert cfg.agent == "orchestrator"
         assert cfg.model == ""
         assert cfg.workers == 1
@@ -69,7 +69,7 @@ class TestGenerateDefaultToml:
         hw = HardwareInfo(cpu_brand="Test CPU", cpu_count=4, ram_gb=16.0)
         toml_str = generate_default_toml(hw)
         assert "[server]" in toml_str
-        assert "port = 8000" in toml_str
+        assert "port = 8765" in toml_str
 
     def test_includes_agent_section(self):
         hw = HardwareInfo()

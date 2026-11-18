@@ -98,7 +98,7 @@ def test_windows_installer_failure_does_not_exit_interactive_host() -> None:
 def test_quickstart_installs_web_search_dependencies() -> None:
     quickstart = QUICKSTART_SH.read_text()
     assert "--extra tools-search" in quickstart
-    assert "already running on port 8000" in quickstart
+    assert "already running on port 8765" in quickstart
 
 
 def test_claude_runner_wheel_maps_only_runtime_files() -> None:

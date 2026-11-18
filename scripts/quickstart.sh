@@ -281,19 +281,19 @@ info "Installing frontend dependencies..."
 ok "Frontend dependencies installed"
 
 # ── 9. Start backend ────────────────────────────────────────────────
-info "Starting backend API server on port 8000..."
-if curl -sf http://localhost:8000/health &>/dev/null; then
-  fail "An OpenJarvis server is already running on port 8000. Stop it before re-running quickstart so updated environment variables are applied."
+info "Starting backend API server on port 8765..."
+if curl -sf http://localhost:8765/health &>/dev/null; then
+  fail "An OpenJarvis server is already running on port 8765. Stop it before re-running quickstart so updated environment variables are applied."
 fi
-uv run jarvis serve --port 8000 &>/dev/null &
+uv run jarvis serve --port 8765 &>/dev/null &
 BACKEND_PID=$!
 CLEANUP_PIDS+=("$BACKEND_PID")
 sleep 3
 
 if ! kill -0 "$BACKEND_PID" 2>/dev/null; then
-  fail "Backend exited during startup. Run 'uv run jarvis serve --port 8000' to see the error."
-elif curl -sf http://localhost:8000/health &>/dev/null; then
-  ok "Backend running at http://localhost:8000"
+  fail "Backend exited during startup. Run 'uv run jarvis serve --port 8765' to see the error."
+elif curl -sf http://localhost:8765/health &>/dev/null; then
+  ok "Backend running at http://localhost:8765"
 else
   warn "Backend may still be starting..."
 fi
@@ -319,7 +319,7 @@ echo ""
 echo -e "${GREEN}${BOLD}  OpenJarvis is running!${NC}"
 echo ""
 echo "  Chat UI:  http://localhost:5173"
-echo "  API:      http://localhost:8000"
+echo "  API:      http://localhost:8765"
 echo "  Model:    $MODEL"
 echo ""
 echo "  Press Ctrl+C to stop all services."

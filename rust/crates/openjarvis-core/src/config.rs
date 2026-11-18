@@ -612,7 +612,7 @@ pub struct ServerConfig {
 }
 
 fn default_server_host() -> String { "0.0.0.0".into() }
-fn default_server_port() -> i64 { 8000 }
+fn default_server_port() -> i64 { 8765 }
 fn default_orchestrator() -> String { "orchestrator".into() }
 fn default_one() -> i64 { 1 }
 

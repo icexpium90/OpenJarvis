@@ -22,7 +22,7 @@
                            ONLY if you also set $env:OPENJARVIS_API_KEY
                            — the server refuses to start unauthenticated
                            on a non-loopback bind.
-      -ListenPort <int>    default: 8000
+      -ListenPort <int>    default: 8765
 
     Usage:
       powershell -ExecutionPolicy Bypass -File jarvis-service.ps1 install
@@ -38,7 +38,7 @@ param(
 
     [string] $InstallRoot,
     [string] $ListenHost = '127.0.0.1',
-    [int]    $ListenPort = 8000
+    [int]    $ListenPort = 8765
 )
 
 $ErrorActionPreference = 'Stop'

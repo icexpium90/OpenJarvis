@@ -80,10 +80,10 @@ RUN groupadd --system --gid 10001 openjarvis && \
 ENV HOME=/home/openjarvis
 USER openjarvis
 
-EXPOSE 8000
+EXPOSE 8765
 
 # Keep `jarvis` as the image entrypoint so Docker and Compose command overrides
 # remain subcommands (for example, `docker run IMAGE serve ...`). Platforms
 # such as Render replace CMD while preserving this entrypoint.
 ENTRYPOINT ["jarvis"]
-CMD ["serve", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["serve", "--host", "0.0.0.0", "--port", "8765"]

@@ -426,7 +426,7 @@ def test_automatic_api_reuse_requires_verified_daemon_ownership(
 
     result = CliRunner().invoke(gui_cmd.gui, ["--no-browser"])
 
-    ownership.assert_called_once_with(8000, require_ready=True)
+    ownership.assert_called_once_with(8765, require_ready=True)
     run.assert_not_called()
     if registered:
         assert result.exit_code == 0

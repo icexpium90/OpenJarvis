@@ -120,5 +120,5 @@ db_path = "~/.openjarvis/traces.db"
 # non-loopback bind without a key. The "server" security profile also flips
 # this to 0.0.0.0 intentionally.
 host = "127.0.0.1"
-port = 8000
+port = 8765
 agent = "native_openhands"

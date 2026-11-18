@@ -12,7 +12,7 @@ from openjarvis.core.config import DEFAULT_CONFIG_PATH
 
 
 @click.group("tunnel", invoke_without_command=True)
-@click.option("--port", default=8000, help="Local port to tunnel.")
+@click.option("--port", default=8765, help="Local port to tunnel.")
 @click.pass_context
 def tunnel(ctx: click.Context, port: int) -> None:
     """Start a Cloudflare tunnel or manage config."""

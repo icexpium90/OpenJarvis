@@ -459,7 +459,7 @@ def _ensure_frontend_dependencies(frontend: Path, npm: str) -> None:
     "--frontend-port", default=5173, show_default=True, type=click.IntRange(1, 65535)
 )
 @click.option(
-    "--api-port", default=8000, show_default=True, type=click.IntRange(1, 65535)
+    "--api-port", default=8765, show_default=True, type=click.IntRange(1, 65535)
 )
 @click.option("--no-server", is_flag=True, help="Do not start the API server.")
 @click.option("--no-browser", is_flag=True, help="Only start the frontend.")

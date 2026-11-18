@@ -1163,7 +1163,7 @@ class ServerConfig:
     """API server settings."""
 
     host: str = "127.0.0.1"
-    port: int = 8000
+    port: int = 8765
     agent: str = "orchestrator"
     model: str = ""
     workers: int = 1
@@ -2389,7 +2389,7 @@ enabled = true
 host = "127.0.0.1"
 # To serve other machines, configure an API key before using:
 # host = "0.0.0.0"
-port = 8000
+port = 8765
 agent = "orchestrator"
 
 [learning]
